@@ -72,3 +72,28 @@ Isso iniciará a aplicação na URL `https://localhost:5290` (é possível alter
 
 - Acesse a API pelo **Swagger** em `https://localhost:5290/swagger` (se estiver rodando localmente em desenvolvimento).
 - Você também pode testar as rotas da API usando o **Postman** com os endpoints definidos.
+
+
+## Testando a API com o Postman
+
+Para facilitar os testes da API, siga as instruções abaixo para importar a coleção no Postman e começar a testar os endpoints da API.
+
+### Passos para Importação da Coleção:
+
+1. **Baixe o arquivo da coleção**:
+   O arquivo `DDDCommerceBCC.postman_collection.json` está localizado na raiz do repositório.
+
+2. **Abra o Postman**
+
+3. **Importe a coleção**:
+   - No Postman, clique no botão **"Import"** no canto superior esquerdo.
+   - Selecione a opção **"Upload Files"** e escolha o arquivo `DDDCommerceBCC.postman_collection.json` que você baixou.
+
+4. **Execute os testes**:
+   Após a importação, você verá a coleção com todos os endpoints da API. Agora você pode testar os métodos GET, POST, PUT e DELETE para garantir que a API esteja funcionando conforme esperado.
+
+### Nota:
+Certifique-se de que a API esteja em execução antes de executar os testes no Postman.
+- Se você alterou a porta de execução da API no arquivo `appsettings.json` ou em outro arquivo de configuração (como `DDDCommerceBCC.Presentation.http`), **atualize as URLs no arquivo Postman** para refletir a nova porta.
+- Caso esteja usando um ambiente de produção ou outro ambiente remoto, ajuste as variáveis de ambiente no Postman para garantir que as requisições sejam feitas para o endpoint correto.
+
