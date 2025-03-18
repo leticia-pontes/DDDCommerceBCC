@@ -14,7 +14,6 @@ public class AppDbContext : DbContext
         if (!optionsBuilder.IsConfigured)
         {
             Env.Load("../.env");
-            //cConsole.WriteLine($"DB_CONNECTION_STRING: {Environment.GetEnvironmentVariable("DB_CONNECTION_STRING")}");
             var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING") 
                                    ?? throw new InvalidOperationException("A variável de ambiente DB_CONNECTION_STRING não está definida.");
 
