@@ -19,7 +19,7 @@ public class PedidoController : ControllerBase
     public IActionResult Post(Pedido pedido)
     {
         _pedidoRepository.Adicionar(pedido);
-        return Ok("Pedido cadastrado com sucesso");
+        return CreatedAtAction(nameof(GetById), new { id = pedido.Id }, pedido);
     }
 
     [HttpGet]
@@ -41,7 +41,6 @@ public class PedidoController : ControllerBase
     public IActionResult Put(int id, [FromBody] Pedido pedidoAtualizado)
     {
         var pedido = _pedidoRepository.ObterPorId(id);
-
         if (pedido == null) return NotFound("Pedido não encontrado!");
         
         pedido.DataPedido = pedidoAtualizado.DataPedido;
@@ -50,8 +49,7 @@ public class PedidoController : ControllerBase
         pedido.Status = pedidoAtualizado.Status;
         
         _pedidoRepository.Atualizar(pedido);
-        
-        return Ok("Pedido atualizado com sucesso!");
+        return NoContent();
     }
 
     [HttpDelete("{id}")]
@@ -59,7 +57,8 @@ public class PedidoController : ControllerBase
     {
         var pedido = _pedidoRepository.ObterPorId(id);
         if (pedido == null) return NotFound("Pedido não encontrado!");
+        
         _pedidoRepository.Remover(pedido);
-        return Ok("Pedido removido com sucesso!");
+        return NoContent();
     }
 }

@@ -19,7 +19,7 @@ public class ItemPedidoController : ControllerBase
     public IActionResult Post(ItemPedido itemPedido)
     {
         _itemPedidoRepository.Adicionar(itemPedido);
-        return Ok("Item cadastrado com sucesso");
+        return CreatedAtAction(nameof(GetById), new { id = itemPedido.Id }, itemPedido);
     }
 
     [HttpGet]
@@ -41,7 +41,6 @@ public class ItemPedidoController : ControllerBase
     public IActionResult Put(int id, [FromBody] ItemPedido itemPedidoAtualizado)
     {
         var itemPedido = _itemPedidoRepository.ObterPorId(id);
-
         if (itemPedido == null) return NotFound("Item não encontrado!");
         
         itemPedido.NomeProduto = itemPedidoAtualizado.NomeProduto;
@@ -49,8 +48,7 @@ public class ItemPedidoController : ControllerBase
         itemPedido.PrecoUnitario = itemPedidoAtualizado.PrecoUnitario;
         
         _itemPedidoRepository.Atualizar(itemPedido);
-        
-        return Ok("Item atualizado com sucesso!");
+        return NoContent();
     }
 
     [HttpDelete("{id}")]
@@ -58,7 +56,8 @@ public class ItemPedidoController : ControllerBase
     {
         var itemPedido = _itemPedidoRepository.ObterPorId(id);
         if (itemPedido == null) return NotFound("Item não encontrado!");
+        
         _itemPedidoRepository.Remover(itemPedido);
-        return Ok("Item removido com sucesso!");
+        return NoContent();
     }
 }
