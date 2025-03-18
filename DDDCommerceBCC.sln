@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Presentation", "1-Presentation", "{1587B281-9682-42A2-8D81-149E3DF305C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Application", "2-Application", "{E281B9E4-BE0D-4911-A415-B4A8D2CF63E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Domain", "3-Domain", "{C2F3AFFE-D34F-4654-BA2C-8A630D89B259}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Infra", "4-Infra", "{8BB0B66C-8E90-4C5C-9E24-119F1258F66D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDDCommerceBCC.Presentation", "DDDCommerceBCC.Presentation\DDDCommerceBCC.Presentation.csproj", "{64D0AB92-2486-473E-863D-6F4F8A461923}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDDCommerceBCC.Domain", "DDDCommerceBCC.Domain\DDDCommerceBCC.Domain.csproj", "{EF377E09-6EBB-4EDE-A61E-95E6E68880F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDDCommerceBCC.Infra", "DDDCommerceBCC.Infra\DDDCommerceBCC.Infra.csproj", "{C64A5524-7331-4A1A-973E-058F5CD6F40B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{64D0AB92-2486-473E-863D-6F4F8A461923} = {1587B281-9682-42A2-8D81-149E3DF305C9}
+		{EF377E09-6EBB-4EDE-A61E-95E6E68880F3} = {C2F3AFFE-D34F-4654-BA2C-8A630D89B259}
+		{C64A5524-7331-4A1A-973E-058F5CD6F40B} = {8BB0B66C-8E90-4C5C-9E24-119F1258F66D}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64D0AB92-2486-473E-863D-6F4F8A461923}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64D0AB92-2486-473E-863D-6F4F8A461923}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64D0AB92-2486-473E-863D-6F4F8A461923}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64D0AB92-2486-473E-863D-6F4F8A461923}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF377E09-6EBB-4EDE-A61E-95E6E68880F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF377E09-6EBB-4EDE-A61E-95E6E68880F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF377E09-6EBB-4EDE-A61E-95E6E68880F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF377E09-6EBB-4EDE-A61E-95E6E68880F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C64A5524-7331-4A1A-973E-058F5CD6F40B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C64A5524-7331-4A1A-973E-058F5CD6F40B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C64A5524-7331-4A1A-973E-058F5CD6F40B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C64A5524-7331-4A1A-973E-058F5CD6F40B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
