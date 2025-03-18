@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "d5356e2f-4464-4180-9cfb-348a3c9e5dd0",
+		"name": "DDDCommerceBCC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37453708"
+	},
+	"item": [
+		{
+			"name": "ItemPedido",
+			"item": [
+				{
+					"name": "Adicionar Item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 2,\r\n  \"nomeProduto\": \"Item 2\",\r\n  \"quantidade\": 3,\r\n  \"precoUnitario\": 24.2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5290/api/ItemPedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5290",
+							"path": [
+								"api",
+								"ItemPedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Itens",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5290/api/ItemPedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5290",
+							"path": [
+								"api",
+								"ItemPedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Item por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5290/api/ItemPedido/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5290",
+							"path": [
+								"api",
+								"ItemPedido",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Item",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"nomeProduto\": \"Item 2\",\r\n    \"quantidade\": 2,\r\n    \"precoUnitario\": 24.2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5290/api/ItemPedido/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5290",
+							"path": [
+								"api",
+								"ItemPedido",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover Item",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5290/api/ItemPedido/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5290",
+							"path": [
+								"api",
+								"ItemPedido",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pedido",
+			"item": [
+				{
+					"name": "Adicionar Pedido",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"dataPedido\": \"2025-03-18T02:11:55.747Z\",\r\n  \"valorTotal\": 72.6,\r\n  \"itens\": [\r\n    {\r\n        \"id\": 1,\r\n        \"nomeProduto\": \"Item 1\",\r\n        \"quantidade\": 1,\r\n        \"precoUnitario\": 24.2\r\n    }\r\n  ],\r\n  \"status\": 2\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5290/api/Pedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5290",
+							"path": [
+								"api",
+								"Pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Pedidos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5290/api/Pedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5290",
+							"path": [
+								"api",
+								"Pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Pedido por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5290/api/Pedido/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5290",
+							"path": [
+								"api",
+								"Pedido",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Pedido",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"dataPedido\": \"2025-03-18T02:11:55.747Z\",\r\n  \"valorTotal\": 24.2,\r\n  \"itens\": [],\r\n  \"status\": 2\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5290/api/Pedido/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5290",
+							"path": [
+								"api",
+								"Pedido",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover Pedido",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5290/api/Pedido/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5290",
+							"path": [
+								"api",
+								"Pedido",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
